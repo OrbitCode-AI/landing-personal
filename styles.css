@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+  background: #fafafa;
+  -webkit-font-smoothing: antialiased;
+}
+
+.personal-site {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
