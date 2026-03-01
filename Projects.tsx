@@ -1,10 +1,10 @@
-import './Projects.css';
+import './Projects.css'
 
 interface Project {
-  title: string;
-  description: string;
-  tags: string[];
-  link?: string;
+  title: string
+  description: string
+  tags: string[]
+  link?: string
 }
 
 const defaultProjects: Project[] = [
@@ -26,10 +26,10 @@ const defaultProjects: Project[] = [
     tags: ['Rust', 'CLI', 'Open Source'],
     link: '#',
   },
-];
+]
 
 interface ProjectCardProps {
-  project: Project;
+  project: Project
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
@@ -42,8 +42,10 @@ function ProjectCard({ project }: ProjectCardProps) {
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
         <div className="project-tags">
-          {project.tags.map((tag) => (
-            <span key={tag} className="project-tag">{tag}</span>
+          {project.tags.map(tag => (
+            <span key={tag} className="project-tag">
+              {tag}
+            </span>
           ))}
         </div>
         {project.link && (
@@ -53,12 +55,12 @@ function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
     </article>
-  );
+  )
 }
 
 interface ProjectsProps {
-  title?: string;
-  projects?: Project[];
+  title?: string
+  projects?: Project[]
 }
 
 function Projects({ title = 'Featured Projects', projects = defaultProjects }: ProjectsProps) {
@@ -73,7 +75,7 @@ function Projects({ title = 'Featured Projects', projects = defaultProjects }: P
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -82,8 +84,8 @@ export default function ProjectsPreview() {
     <div className="preview-container">
       <Projects />
     </div>
-  );
+  )
 }
 
-export { Projects, ProjectCard };
-export type { Project };
+export { Projects, ProjectCard }
+export type { Project }

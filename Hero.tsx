@@ -1,9 +1,9 @@
-import './Hero.css';
+import './Hero.css'
 
 interface HeroProps {
-  name?: string;
-  title?: string;
-  tagline?: string;
+  name?: string
+  title?: string
+  tagline?: string
 }
 
 function Hero({
@@ -19,8 +19,12 @@ function Hero({
         <h2 className="hero-title">{title}</h2>
         <p className="hero-tagline">{tagline}</p>
         <div className="hero-actions">
-          <a href="#projects" className="hero-btn primary">View Work</a>
-          <a href="#contact" className="hero-btn secondary">Get in Touch</a>
+          <a href="#projects" className="hero-btn primary">
+            View Work
+          </a>
+          <a href="#contact" className="hero-btn secondary">
+            Get in Touch
+          </a>
         </div>
         <div className="hero-social">
           <a href="#" aria-label="GitHub">
@@ -40,7 +44,7 @@ function Hero({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -49,7 +53,7 @@ export default function HeroPreview() {
     <div className="preview-container">
       <Hero />
     </div>
-  );
+  )
 }
 
-export { Hero };
+export { Hero }

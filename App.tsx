@@ -1,9 +1,9 @@
-import Hero from './Hero';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
-import Contact from './Contact';
-import './styles.css';
+import Hero from './Hero'
+import About from './About'
+import Projects from './Projects'
+import Skills from './Skills'
+import Contact from './Contact'
+import './styles.css'
 
 export default function App() {
   return (
@@ -14,5 +14,5 @@ export default function App() {
       <Skills />
       <Contact />
     </div>
-  );
+  )
 }

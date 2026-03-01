@@ -1,9 +1,9 @@
-import './Skills.css';
+import './Skills.css'
 
 interface Skill {
-  name: string;
-  level: number;
-  category: string;
+  name: string
+  level: number
+  category: string
 }
 
 const defaultSkills: Skill[] = [
@@ -15,10 +15,10 @@ const defaultSkills: Skill[] = [
   { name: 'Python', level: 75, category: 'Backend' },
   { name: 'PostgreSQL', level: 80, category: 'Backend' },
   { name: 'Git', level: 90, category: 'Tools' },
-];
+]
 
 interface SkillBarProps {
-  skill: Skill;
+  skill: Skill
 }
 
 function SkillBar({ skill }: SkillBarProps) {
@@ -32,29 +32,29 @@ function SkillBar({ skill }: SkillBarProps) {
         <div className="skill-fill" style={{ width: `${skill.level}%` }} />
       </div>
     </div>
-  );
+  )
 }
 
 interface SkillsProps {
-  title?: string;
-  skills?: Skill[];
+  title?: string
+  skills?: Skill[]
 }
 
 function Skills({ title = 'Skills', skills = defaultSkills }: SkillsProps) {
-  const categories = [...new Set(skills.map((s) => s.category))];
+  const categories = [...new Set(skills.map(s => s.category))]
 
   return (
     <section id="skills" className="skills">
       <div className="skills-container">
         <h2 className="section-title">{title}</h2>
         <div className="skills-grid">
-          {categories.map((category) => (
+          {categories.map(category => (
             <div key={category} className="skills-category">
               <h3 className="category-title">{category}</h3>
               <div className="category-skills">
                 {skills
-                  .filter((s) => s.category === category)
-                  .map((skill) => (
+                  .filter(s => s.category === category)
+                  .map(skill => (
                     <SkillBar key={skill.name} skill={skill} />
                   ))}
               </div>
@@ -63,7 +63,7 @@ function Skills({ title = 'Skills', skills = defaultSkills }: SkillsProps) {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -72,8 +72,8 @@ export default function SkillsPreview() {
     <div className="preview-container">
       <Skills />
     </div>
-  );
+  )
 }
 
-export { Skills, SkillBar };
-export type { Skill };
+export { Skills, SkillBar }
+export type { Skill }

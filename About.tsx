@@ -1,9 +1,9 @@
-import './About.css';
+import './About.css'
 
 interface AboutProps {
-  title?: string;
-  bio?: string;
-  highlights?: string[];
+  title?: string
+  bio?: string
+  highlights?: string[]
 }
 
 const defaultHighlights = [
@@ -11,7 +11,7 @@ const defaultHighlights = [
   'Passionate about clean code and user experience',
   'Always learning new technologies',
   'Open source contributor',
-];
+]
 
 function About({
   title = 'About Me',
@@ -37,7 +37,7 @@ function About({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -46,7 +46,7 @@ export default function AboutPreview() {
     <div className="preview-container">
       <About />
     </div>
-  );
+  )
 }
 
-export { About };
+export { About }
